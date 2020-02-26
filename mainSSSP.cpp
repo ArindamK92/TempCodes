@@ -236,8 +236,9 @@ int main(int argc, char* argv[])
 	scanf("%d", &nodes);*/
 	/*X.reserve(nodes);
 	Y.reserve(nodes);*/
-	X.resize(nodes);
-	Y.resize(nodes);
+	ADJ_Bundle adjobj;
+	X.resize(nodes, adjobj);
+	Y.resize(nodes, adjobj);
 	readin_graphU2(&X, nodes, cstr1);
 	/*for (int i = 0; i < X.size(); i++)
 	{
