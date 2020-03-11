@@ -1,7 +1,3 @@
-Sequential SSSP code : mainSSSP.cpp
-
-
-
 How to create changeedge file:
 ____________________________________
 nvcc -o op_createChangeEdges createChangedEdges.cpp
@@ -20,11 +16,19 @@ g++ -o output <filename mainSSSP.cpp> -std=c++11 -O3
 ./output <fullgraphfilename> <no. of nodes>
 
 
+How to connect disconnected nodes:
+_____________________________________________________
+nvcc -o op_createChangeEdges.exe createChangedEdges.cpp
+op_connectDisconnectedNodes.exe <SSSPfile> > <newFilename to store new edges>
+
+add the new synthesized edges in full graph and again find seqSSSP. Use new updated fullgraph and new seqSSSP file for dynamic SSSP.
+
+
 How to run parallel CUDA SSSP code:
 ____________________________________
 ****main commands to run****
 nvcc -o op main2.cu
-./op <fullgraph file name> <SSSP file name> <changeEdges file name> <no. of nodes> <no. of edges>
+./op <fullgraph file name> <SSSP file name> <changeEdges file name> <no. of nodes> <no. of edges * 2 (or total number of lines in fullgraph file)>
 
 
 Forge cuda commands:
