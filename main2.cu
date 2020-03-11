@@ -865,13 +865,13 @@ int main(int argc, char* argv[]) {
 		print_network(X);*/
 	}
 	//Test code start
-	//cout << "SSSP" << endl;
-	/*for (int i = 0; i < nodes; i++)
+	cout << "SSSP" << endl;
+	for (int i = 0; i < nodes; i++)
 	{
 		cout << "*******" << endl;
 		cout << "node" << i << endl << "dist" << SSSP[i].Dist << endl << "parent" << SSSP[i].Parent << endl;
 	}
-	cout << "*******success*******" << endl;*/
+	cout << "*******success*******" << endl;
 	
 	//Test code end
 
